@@ -1,10 +1,12 @@
 package se.lexicon;
 
 
+import java.util.Scanner;
+
 public class JavaFundamentalsDemo {
 
     public static void main(String[] args) {
-        ex7();
+        GetNumbers();
     }
 
 
@@ -131,4 +133,37 @@ public class JavaFundamentalsDemo {
         while (i < 5);
     }
 
-}
+    // Ex:10 : Use Method to find the smallest number among three.
+    public static void GetNumbers() {
+        Scanner scanner = new Scanner(System.in);
+        boolean continueProgram;
+        do {
+            System.out.println("Insert the First Number");
+            double X = scanner.nextDouble();
+
+            System.out.println("Insert the Second Number");
+            double Y = scanner.nextDouble();
+
+            System.out.println("Insert the Third Number");
+            double Z = scanner.nextDouble();
+
+            // Find the smallest number.
+            double smallestNumber = Math.min(Math.min(X, Y), Z);
+
+            // Display the smallest Number.
+            System.out.println("The smallest number is: " + smallestNumber);
+
+            // Ask the user if they want to continue
+            System.out.println("Do you want to continue? (yes/no)");
+            String userResponse = scanner.next().toLowerCase();
+
+            // Determine if the loop should continue based on the user's response
+            continueProgram = userResponse.equals("yes");
+
+        } while (continueProgram);
+
+        System.out.println("Exiting the program ... GoodBye! ");
+    } // Do-while loop
+
+
+} //Class
