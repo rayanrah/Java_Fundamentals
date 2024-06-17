@@ -1,13 +1,12 @@
 package se.lexicon;
 
 
-import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class JavaFundamentalsDemo {
 
     public static void main(String[] args) {
-        ;
+        ex12();
     }
 
 
@@ -176,4 +175,23 @@ public class JavaFundamentalsDemo {
         char[] characterArray = {'a', 'b', 'c'}; // Declare an array for Char.
     }
 
-    } //Class
+    // Ex:12 : Accessing an Array elements.
+
+    public static void ex12() {
+
+        String[] names = new String[3]; // Array with  default values [null, null, null].
+
+        System.out.println(names.length); // It will print the number of Elements.
+
+        // Add value to the first index.
+        names[0] = "Fredrick";
+        names[names.length - 1] = "John";
+
+        System.out.println(names[0]);
+        System.out.println(names[1]);
+        System.out.println(names[2]);
+
+    }
+
+
+} //Class
