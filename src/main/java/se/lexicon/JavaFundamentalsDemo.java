@@ -1,12 +1,13 @@
 package se.lexicon;
 
 
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class JavaFundamentalsDemo {
 
     public static void main(String[] args) {
-        ex5();
+        ;
     }
 
 
@@ -159,5 +160,20 @@ public class JavaFundamentalsDemo {
         System.out.println("Exiting the program ... GoodBye! ");
     } // Do-while loop
 
+    // Ex:11 : Initializing an Array for different value types.
 
-} //Class
+    public static void ex11(String[] args) {
+
+        // Syntax for declaring Array in single line.
+        int[] numbers = new int[3]; // output: [0, 0, 0].
+
+        // Define the value for the array.
+        int[] numbersarray = new int[]{1, 2, 8}; //This array has 3 elements.
+        int[] numersArrayShortSyntax = {1, 2, 8}; //Shorten way of declaring.
+
+        String[] stringArray = {"Mar", "Martin", "Jose"}; // Declare an array for String.
+
+        char[] characterArray = {'a', 'b', 'c'}; // Declare an array for Char.
+    }
+
+    } //Class
