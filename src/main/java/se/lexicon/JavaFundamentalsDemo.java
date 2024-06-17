@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class JavaFundamentalsDemo {
 
     public static void main(String[] args) {
-        GetNumbers();
+        ex5();
     }
 
 
@@ -74,8 +74,8 @@ public class JavaFundamentalsDemo {
         System.out.println(dayName);
     }
 
-    //Ex.05: Create an Class and Object.
-    // Creating an object of the Car class.
+    //Ex.05: Call instance method and its fields.
+    // Creating an object of the instance Car.
 
     public static void ex5() {
 
@@ -85,13 +85,7 @@ public class JavaFundamentalsDemo {
         Mycar.model = "Tesla Model S";
         Mycar.year = 2018;
 
-        System.out.println("The model of my car is " + Mycar.model + " from " + Mycar.year + " " +
-                "and" + " the color is " + Mycar.color); // Output: The model of my car is Tesla
-        // Model S from 2018 and the color is red.
-
-        // Accessing properties
-        Mycar.Start();  // Output: My Car with model Tesla Model S is Starting
-        Mycar.Stop();   // Output: My Car with model Tesla Model S is Stopping
+        System.out.println(Mycar.getCarInfo());
     }
 
     //Ex.06: Declare For Loop-01
