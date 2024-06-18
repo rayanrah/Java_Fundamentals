@@ -1,14 +1,13 @@
 package se.lexicon;
 
-
 import java.util.Scanner;
 
 public class JavaFundamentalsDemo {
 
     public static void main(String[] args) {
-        ex12();
-    }
 
+        ex18();
+    }
 
     // Ex.01 - Declare a Method.
     public static int addingNumEx01(int a, int b, int c) {
@@ -39,7 +38,6 @@ public class JavaFundamentalsDemo {
     //Ex.04: Switch statement
     // The main method uses a "switch statement" to determine the name of a day based on the integer value
     // of the variable day.
-
     public static void ex4() {
 
         int day = 4;
@@ -76,7 +74,6 @@ public class JavaFundamentalsDemo {
 
     //Ex.05: Call instance method and its fields.
     // Creating an object of the instance Car.
-
     public static void ex5() {
 
         Car Mycar = new Car();
@@ -117,7 +114,6 @@ public class JavaFundamentalsDemo {
     }
 
     //Ex.09: Declare Do While Loop.
-
     public static void ex9() {
         int i = 0;
         do {
@@ -160,7 +156,6 @@ public class JavaFundamentalsDemo {
     } // Do-while loop
 
     // Ex:11 : Initializing an Array for different value types.
-
     public static void ex11(String[] args) {
 
         // Syntax for declaring Array in single line.
@@ -176,7 +171,6 @@ public class JavaFundamentalsDemo {
     }
 
     // Ex:12 : Accessing an Array elements.
-
     public static void ex12() {
 
         String[] names = new String[3]; // Array with  default values [null, null, null].
@@ -190,8 +184,133 @@ public class JavaFundamentalsDemo {
         System.out.println(names[0]);
         System.out.println(names[1]);
         System.out.println(names[2]);
-
     }
+
+    // Ex:13 : iterating through the array using indexed-base for loop.
+    public static void ex13() {
+
+        int[] numbers = {1, 2, 3, 4, 7};
+
+        // index based-for-loop
+        for (int i = 0; i < numbers.length; i++)
+            System.out.println("numbers[" + i + "]= " + numbers[i]);
+
+        System.out.println("----------------");
+        // Enhanced-for-loop (for-each-loop).
+        for (int num : numbers) {
+            System.out.println(num);
+        }
+    }
+
+    // Ex:14 : Changing the value of array.
+    public static void ex14() {
+        int[] numbers = {10, 20, 30, 50};
+        for (int i = 0; i < numbers.length; i++) {
+            if (i == 2) {
+                numbers[i] = 300;
+            }
+
+            System.out.println(numbers[i]);
+        }
+    }
+
+    // Ex:15 : Expanding the Array size.
+    public static void ex15() {
+        int[] originalArray = {10, 20, 30, 50};
+
+        for (int element : originalArray) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+
+        // 1.First we need to create an Array that has 5 elements.
+        int[] newArray = new int[originalArray.length + 1]; // [0,0,0,0,0]
+
+        // 2. Use the index-for-loop to access the value of the 'originalArray'.
+        // We add the value of 'originalArray' to the vale of the 'newArray'.
+        // We want to add '7' to the newArray. we need to access the last index of newArray.
+
+        for (int i = 0; i < originalArray.length; i++) {
+            newArray[i] = originalArray[i]; // [10,20,30,50,0]
+        }
+        newArray[newArray.length - 1] = 7; // [10,20,30,50,7]
+
+        // printout the newArray elements.
+        for (int element : newArray) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+
+    // Ex:16 : Sort the Array.
+    public static void ex16() {
+        int[] numbers = {4, 2, 5, 3, 7};
+
+        // iterating over each element of Array.
+        for (int i = 0; i < numbers.length; i++) {
+
+            // inner loop to iterate over the remaining element in the Array.
+            // Starting from next elements. i+1.
+            for (int j = i + 1; j < numbers.length; j++) {
+
+                if (numbers[i] > numbers[j]) { // ex: number 4 > 2.
+                    int temp = numbers[i]; // 4
+                    numbers[i] = numbers[j]; // We change the index of i and J.
+                    numbers[j] = temp;
+                } // if
+            } // for j
+        } //for i
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
+        System.out.println();
+    } // ex16
+
+    // Ex:17 : Find the Max number of the Array.
+    public static void ex17() {
+        int[] numbers = {5, 2, 3, 4, 7};
+
+        // Declare the variable as a MaxNumber.as a default we choose the first element of Array.
+        int maxNumber = 5;
+
+        for (int i = 1; i < numbers.length; i++) {
+
+            if (numbers[i] > maxNumber) {
+                maxNumber = numbers[i];
+            } // if
+        } // for-loop
+        System.out.println("maxNumber is: " + maxNumber);
+    } //ex17
+
+    // Ex:18 : Multi-dimensional Array. We create an Array that has Two Dimensions.
+    public static void ex18() {
+        // 0 x 0
+        // 0 x x
+        // x 0 x
+        String [][] matrixFormat = new String [3][3];
+
+        matrixFormat [0][0] = "0";
+        matrixFormat [0][1] = "x";
+        matrixFormat [0][2] = "0";
+
+        matrixFormat [1][0] = "0";
+        matrixFormat [1][1] = "x";
+        matrixFormat [1][2] = "x";
+
+        matrixFormat [2][0] = "x";
+        matrixFormat [2][1] = "0";
+        matrixFormat [2][2] = "x";
+
+        for (int i = 0; i < matrixFormat.length; i++) {
+
+            for (int j = 0; j < matrixFormat.length; j++) {
+                System.out.print(matrixFormat [i][j] + "\t");
+            } // for J
+            System.out.println("\n");
+        } //for i
+    } //ex18
+
+
 
 
 } //Class
