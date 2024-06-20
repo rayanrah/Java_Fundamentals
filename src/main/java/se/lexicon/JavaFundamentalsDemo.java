@@ -14,6 +14,7 @@ public class JavaFundamentalsDemo {
         return a + b + c;
     }
 
+
     // Ex.02 - Declare Variable
     public static void ex2() {
         double balance = 4555555.00;
@@ -287,30 +288,27 @@ public class JavaFundamentalsDemo {
         // 0 x 0
         // 0 x x
         // x 0 x
-        String [][] matrixFormat = new String [3][3];
+        String[][] matrixFormat = new String[3][3];
 
-        matrixFormat [0][0] = "0";
-        matrixFormat [0][1] = "x";
-        matrixFormat [0][2] = "0";
+        matrixFormat[0][0] = "0";
+        matrixFormat[0][1] = "x";
+        matrixFormat[0][2] = "0";
 
-        matrixFormat [1][0] = "0";
-        matrixFormat [1][1] = "x";
-        matrixFormat [1][2] = "x";
+        matrixFormat[1][0] = "0";
+        matrixFormat[1][1] = "x";
+        matrixFormat[1][2] = "x";
 
-        matrixFormat [2][0] = "x";
-        matrixFormat [2][1] = "0";
-        matrixFormat [2][2] = "x";
+        matrixFormat[2][0] = "x";
+        matrixFormat[2][1] = "0";
+        matrixFormat[2][2] = "x";
 
         for (int i = 0; i < matrixFormat.length; i++) {
 
             for (int j = 0; j < matrixFormat.length; j++) {
-                System.out.print(matrixFormat [i][j] + "\t");
+                System.out.print(matrixFormat[i][j] + "\t");
             } // for J
             System.out.println("\n");
         } //for i
     } //ex18
-
-
-
 
 } //Class
