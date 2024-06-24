@@ -1,19 +1,22 @@
 package se.lexicon;
 
 import java.util.Scanner;
+import java.util.SortedMap;
 
 public class JavaFundamentalsDemo {
 
     public static void main(String[] args) {
-
-        ex18();
+        ex19();
     }
 
-    // Ex.01 - Declare a Method.
-    public static int addingNumEx01(int a, int b, int c) {
-        return a + b + c;
-    }
+    // Ex.01 - Declare a Method from MathOperator class.
+    public static void ex01() {
+        int result = MathOperator.addition(12, 20);
+        System.out.println(result);
 
+        double resultDouble = MathOperator.addition(10.11,15.89);
+        System.out.println(resultDouble);
+    }
 
     // Ex.02 - Declare Variable
     public static void ex2() {
@@ -310,5 +313,22 @@ public class JavaFundamentalsDemo {
             System.out.println("\n");
         } //for i
     } //ex18
+
+    // Ex.19 - Create a String.
+    public static void ex19 () {
+        // create a String by new keyword.
+        String sentenceOne = new String ("String with Keyword. ");
+
+        // Create a String literals.
+        String sentenceTwo = "String with literals";
+
+        System.out.println(sentenceOne);
+        System.out.println(sentenceTwo);
+
+        // Concat
+    }
+
+
+
 
 } //Class
