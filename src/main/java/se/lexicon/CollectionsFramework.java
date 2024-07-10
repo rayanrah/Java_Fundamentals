@@ -179,15 +179,16 @@ public class CollectionsFramework {
         ArrayList<Person> people = new ArrayList<>();
 
         people.add(new Person(3, "John", "Doe", "jdoe@me.com"));
-        people.add(new Person(1, "Jane", "Doe", "jdoe@me.com"));
-        people.add(new Person(2, "John", "Doe", "jdoe@me.com"));
-        people.add(new Person(4, "Jane", "Doe", "jdoe@me.com"));
+        people.add(new Person(1, "Alice", "Doe", "Alice@me.com"));
+        people.add(new Person(2, "Marc", "Doe", "Marc@me.com"));
+        people.add(new Person(4, "Beatrice", "Doe", "jdoe@me.com"));
 
         System.out.println("Iterate the ArrayList and print the Person object.");
         for (Person person : people) { // (Type of element + name of variable : collection)
             System.out.println(person);
         }
         System.out.println("--------------------------");
+
         System.out.println("Sorting object by id: using 'Comparable interface'");
         System.out.println("We will encounter an Error using .sort method | we need to implement the 'Comparable interface'");
         System.out.println("TO do that we need to override the 'compareTo' method in the 'Person' class");
@@ -197,9 +198,27 @@ public class CollectionsFramework {
         for (Person person : people) { // (Type of element + name of variable : collection)
             System.out.println(person);
         }
+        System.out.println("--------------------------");
 
+        System.out.println("'Comparator' Interface for sorting Name:");
+        Collections.sort(people, new Comparator<Person>() {
+            @Override
+            public int compare(Person o1, Person o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        });
+        for (Person person : people) { // (Type of element + name of variable : collection)
+            System.out.println(person);
+        }
+        System.out.println("--------------------------");
 
+        System.out.println("'Comparator' Interface for sorting Email: using shortcut 'Lambda Expression'");
+        Collections.sort(people, (o1,o2) -> o1.getEmail().compareTo(o2.getEmail()));
 
+        for (Person person : people) { // (Type of element + name of variable : collection)
+            System.out.println(person);
+        }
+        System.out.println("--------------------------");
 
     } // ex07
 
