@@ -1,17 +1,21 @@
 package se.lexicon;
 
 import java.util.Scanner;
+import java.util.SortedMap;
 
 public class JavaFundamentalsDemo {
 
     public static void main(String[] args) {
-
-        ex18();
+        ex19();
     }
 
-    // Ex.01 - Declare a Method.
-    public static int addingNumEx01(int a, int b, int c) {
-        return a + b + c;
+    // Ex.01 - Declare a Method from MathOperator class.
+    public static void ex01() {
+        int result = MathOperator.addition(12, 20);
+        System.out.println(result);
+
+        double resultDouble = MathOperator.addition(10.11,15.89);
+        System.out.println(resultDouble);
     }
 
     // Ex.02 - Declare Variable
@@ -287,28 +291,42 @@ public class JavaFundamentalsDemo {
         // 0 x 0
         // 0 x x
         // x 0 x
-        String [][] matrixFormat = new String [3][3];
+        String[][] matrixFormat = new String[3][3];
 
-        matrixFormat [0][0] = "0";
-        matrixFormat [0][1] = "x";
-        matrixFormat [0][2] = "0";
+        matrixFormat[0][0] = "0";
+        matrixFormat[0][1] = "x";
+        matrixFormat[0][2] = "0";
 
-        matrixFormat [1][0] = "0";
-        matrixFormat [1][1] = "x";
-        matrixFormat [1][2] = "x";
+        matrixFormat[1][0] = "0";
+        matrixFormat[1][1] = "x";
+        matrixFormat[1][2] = "x";
 
-        matrixFormat [2][0] = "x";
-        matrixFormat [2][1] = "0";
-        matrixFormat [2][2] = "x";
+        matrixFormat[2][0] = "x";
+        matrixFormat[2][1] = "0";
+        matrixFormat[2][2] = "x";
 
         for (int i = 0; i < matrixFormat.length; i++) {
 
             for (int j = 0; j < matrixFormat.length; j++) {
-                System.out.print(matrixFormat [i][j] + "\t");
+                System.out.print(matrixFormat[i][j] + "\t");
             } // for J
             System.out.println("\n");
         } //for i
     } //ex18
+
+    // Ex.19 - Create a String.
+    public static void ex19 () {
+        // create a String by new keyword.
+        String sentenceOne = new String ("String with Keyword. ");
+
+        // Create a String literals.
+        String sentenceTwo = "String with literals";
+
+        System.out.println(sentenceOne);
+        System.out.println(sentenceTwo);
+
+        // Concat
+    }
 
 
 
